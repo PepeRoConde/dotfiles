@@ -1,0 +1,20 @@
+[plugin]
+
+prepend_previewers = [
+    { name = "*.csv", run = "rich-preview"}, # for csv files
+    { name = "*.md", run = "glow" }, # for markdown (.md) files
+    { name = "*/", run = "eza-preview" },
+    { name = "*.rst", run = "rich-preview"}, # for restructured text (.rst) files
+    { name = "*.ipynb", run = "nbpreview"}, # for jupyter notebooks (.ipynb)
+    { name = "*.json", run = "rich-preview"}, # for json (.json) files
+#    { name = "*.lang_type", run = "rich-preview"} # for particular language files eg. .py, .go., .lua, etc.
+]
+
+[manager]
+ratio = [3,5,4]
+linemode = 'size'
+
+[preview]
+
+max_width = 5000
+max_height = 5000

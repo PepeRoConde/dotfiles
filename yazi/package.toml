@@ -1,0 +1,52 @@
+[[plugin.deps]]
+use = "dedukun/relative-motions"
+rev = "ce2e890"
+hash = "23915860e59348bf4166778bb0e606f7"
+
+[[plugin.deps]]
+use = "imsi32/yatline"
+rev = "90e0284"
+hash = "8d4cb2dfadcbda045ddaa5c274441f9c"
+
+[[plugin.deps]]
+use = "wekauwau/yatline-created-time"
+rev = "d96b42b"
+hash = "695b2441885359206812dcd4e810633c"
+
+[[plugin.deps]]
+use = "Lil-Dank/lazygit"
+rev = "7a08a09"
+hash = "a1fa2b3e1826c3a34804ea8c548e9f80"
+
+[[plugin.deps]]
+use = "imsi32/yatline-githead"
+rev = "3b0eb7c"
+hash = "bfd30c396bbe2af526cb949d97ce3dcf"
+
+[[plugin.deps]]
+use = "josephschmitt/auto-layout"
+rev = "626a601"
+hash = "747a700c90fffc5b187a6094fd0661b0"
+
+[[plugin.deps]]
+use = "AnirudhG07/nbpreview"
+rev = "bc573d5"
+hash = "ab61298c387a63e781a87129f533883b"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:toggle-pane"
+rev = "4b027c7"
+hash = "f3853bbdd1da2fad09d059ab5464abfd"
+
+[[plugin.deps]]
+use = "Reledia/glow"
+rev = "2da96e3"
+hash = "f9ee1436e3b853508d87f7d49dce56e6"
+
+[[plugin.deps]]
+use = "PepeRoConde/eza-preview"
+rev = "528d627"
+hash = "d3d8b1a9698130795bbe6de80a0a6cce"
+
+[flavor]
+deps = []

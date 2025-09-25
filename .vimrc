@@ -44,6 +44,7 @@ nnoremap <C-u> <Cmd>UndotreeToggle<CR>
 nnoremap <C-x> <Cmd>MinimapToggle<CR>
 nnoremap + :silent Goyo 80%x80% \| redraw!<CR>
 nnoremap - :silent Goyo 50%x80% \| redraw!<CR>
+nnoremap _ :Goyo \| q<CR>
 nnoremap <leader>w :InteractiveWindow<CR>
 nnoremap <leader>l :Limelight<CR>
 nnoremap Z :Files<CR>

@@ -10,6 +10,9 @@ Plug 'iamcco/markdown-preview.nvim'
 
 " IDE
 Plug 'preservim/nerdtree'
+Plug 'lambdalisue/vim-fern'
+Plug 'brandon1024/fern-renderer-nf.vim'
+Plug 'liuchengxu/vista.vim'
 Plug 'mbbill/undotree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'Yggdroot/indentLine'
@@ -40,12 +43,14 @@ nnoremap <C-e> :bn<CR>
 nnoremap <C-q> :bp<CR>
 nnoremap <C-m> <Cmd>MarkdownPreview<CR>
 nnoremap <C-t> <Cmd>NERDTreeToggle<CR>
+nnoremap <C-f> <Cmd>Fern . -drawer<CR>
 nnoremap <C-u> <Cmd>UndotreeToggle<CR>
 nnoremap <C-x> <Cmd>MinimapToggle<CR>
+"nnoremap <C-x> <Cmd>Vista!!<CR>
 nnoremap + :silent Goyo 80%x80% \| redraw!<CR>
 nnoremap - :silent Goyo 50%x80% \| redraw!<CR>
 nnoremap _ :Goyo \| q<CR>
-nnoremap <leader>w :InteractiveWindow<CR>
+nnoremap <C-w> :InteractiveWindow<CR>
 nnoremap <leader>l :Limelight<CR>
 nnoremap Z :Files<CR>
 nnoremap z :RG<CR>
@@ -88,6 +93,21 @@ let g:minimap_cursor_color = 'TabLineSel'
 let g:slime_target = "tmux"
 let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-of}"}
 
+let g:fern#renderer = 'brandon1024/fern-renderer-nf.vim'
+function! s:init_fern() abort
+  " Just clear Fern's conflicting mappings, don't add new ones
+  silent! nunmap <buffer> <C-h>
+  silent! nunmap <buffer> <C-j>
+  silent! nunmap <buffer> <C-k>
+  silent! nunmap <buffer> <C-l>
+endfunction
+
+augroup fern-custom
+  autocmd! *
+  autocmd FileType fern call s:init_fern()
+augroup END
+"let g:fern#renderer = 'nerdfont'
+
 " ============================================================================
 "  CORES E APARIENCIA
 " ============================================================================
@@ -107,6 +127,8 @@ let g:nord_cursor_line_number_background = 1
 
 colorscheme nord
 autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
+
+:set fillchars+=vert:\ 
 
 " ============================================================================
 "  CONFIGURACIÓN BÁSICA

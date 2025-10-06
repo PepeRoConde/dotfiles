@@ -61,7 +61,7 @@ config = {
   leader = { key = 'z', mods = 'CTRL'},
   window_decorations = "RESIZE",
   window_close_confirmation = 'AlwaysPrompt',
-  font = wezterm.font('JuliaMono', { weight = "Regular" }),
+  font = wezterm.font('JuliaMono Nerd Font'),
   send_composed_key_when_left_alt_is_pressed = true,
 
   keys = {
@@ -75,7 +75,7 @@ config = {
   color_scheme = "nord",
   adjust_window_size_when_changing_font_size = false,
   window_frame = merge_tables({
-    font = wezterm.font("FiraMono Nerd Font Mono", { weight = "ExtraBold" }),
+    font = wezterm.font("JuliaMono Nerd Font"),
   }, tab_bar_theme.window_frame_colors),
 
   colors = {
@@ -100,4 +100,3 @@ if use_background_image then
 end
 
 return config
-
